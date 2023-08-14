@@ -1,17 +1,15 @@
 #include <iostream>
 
-using namespace std;
-
 void menu() {
-	cout << '\n';
-	cout << "Christ to Buddha" << endl;
-	cout << "	1) Christ year x" << endl;
-	cout << "	2) Christ years x-x" << endl;
-	cout << "Buddha to Christ" << endl;
-	cout << "	3) Buddha year x" << endl;
-	cout << "	4) Buddha years x-x" << endl;
-	cout << "5) EXIT Program" << endl;
-	cout << '\n';
+	std::cout << '\n';
+	std::cout << "Christ to Buddha" << std::endl;
+	std::cout << "	1) Christ year x" << std::endl;
+	std::cout << "	2) Christ years x-x" << std::endl;
+	std::cout << "Buddha to Christ" << std::endl;
+	std::cout << "	3) Buddha year x" << std::endl;
+	std::cout << "	4) Buddha years x-x" << std::endl;
+	std::cout << "5) EXIT Program" << std::endl;
+	std::cout << '\n';
 
 }
 
@@ -23,42 +21,42 @@ int main() {
 
 	do {
 		menu();
-		cout << "Select number then press ENTER : ";
-		cin >> menuNumber;
-		cin.clear(); // clear error state
-		cin.ignore(numeric_limits<streamsize>::max(), '\n'); //discard 'bad' character(s)
+		std::cout << "Select number then press ENTER : ";
+		std::cin >> menuNumber;
+		std::cin.clear(); // clear error state
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard 'bad' character(s)
 
 		if (5 == menuNumber) { break; }
 
 		switch (menuNumber) {
 		case 1:
-			cout << "Chirst year = ";
-			cin >> year;
-			cout << "Buddha year = " << year + 543 << endl;
+			std::cout << "Chirst year = ";
+			std::cin >> year;
+			std::cout << "Buddha year = " << year + 543 << std::endl;
 			break;
 		case 2:
-			cout << "Chirst year x-x = ";
-			cin >> fromYear >> to >> toYear;
-			cout << "Buddha year = " << fromYear + 543 << "-" << toYear + 543 << endl;
+			std::cout << "Chirst year x-x = ";
+			std::cin >> fromYear >> to >> toYear;
+			std::cout << "Buddha year = " << fromYear + 543 << "-" << toYear + 543 << std::endl;
 			break;
 		case 3:
-			cout << "Buddha year = ";
-			cin >> year;
-			cout << "Christ year = " << year - 543 << endl;
+			std::cout << "Buddha year = ";
+			std::cin >> year;
+			std::cout << "Christ year = " << year - 543 << std::endl;
 			break;
 		case 4:
-			cout << "Buddha year x-x = ";
-			cin >> fromYear >> to >> toYear;
-			cout << "Christ year = " << fromYear - 543 << "-" << toYear - 543 << endl;
+			std::cout << "Buddha year x-x = ";
+			std::cin >> fromYear >> to >> toYear;
+			std::cout << "Christ year = " << fromYear - 543 << "-" << toYear - 543 << std::endl;
 			break;
 		default:
-			cout << "Wrong number please select correctly number" << endl;
+			std::cout << "Wrong number please select correctly number" << std::endl;
 			break;
 		}
 	} while (menuNumber != 5);
 
-	cout << '\n';
-	cout << "Thank you and Good bye." << endl;
+	std::cout << '\n';
+	std::cout << "Thank you and Good bye." << std::endl;
 
 	system("pause");	// Windows
 	//system("read");	// Linux
