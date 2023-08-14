@@ -3,6 +3,7 @@
 using namespace std;
 
 void menu() {
+	cout << '\n';
 	cout << "Christ to Buddha" << endl;
 	cout << "	1) Christ year x" << endl;
 	cout << "	2) Christ years x-x" << endl;
@@ -10,11 +11,11 @@ void menu() {
 	cout << "	3) Buddha year x" << endl;
 	cout << "	4) Buddha years x-x" << endl;
 	cout << "5) EXIT Program" << endl;
-	cout << endl;
+	cout << '\n';
 
 }
 
-void main() {
+int main() {
 	int year;
 	int fromYear, toYear;
 	int menuNumber;
@@ -24,7 +25,6 @@ void main() {
 		menu();
 		cout << "Select number then press ENTER : ";
 		cin >> menuNumber;
-		cout << endl;
 
 		if (5 == menuNumber) { break; }
 
@@ -53,11 +53,12 @@ void main() {
 			cout << "Wrong number please select correctly number" << endl;
 			break;
 		}
-	} while (menuNumber < 1 || menuNumber > 4);
+	} while (menuNumber != 5);
 
-	cout << endl;
+	cout << '\n';
 	cout << "Thank you and Good bye." << endl;
 
 	system("pause");	// Windows
 	//system("read");	// Linux
+	return 0;
 }
