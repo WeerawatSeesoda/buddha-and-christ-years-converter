@@ -25,6 +25,8 @@ int main() {
 		menu();
 		cout << "Select number then press ENTER : ";
 		cin >> menuNumber;
+		cin.clear(); // clear error state
+		cin.ignore(numeric_limits<streamsize>::max(), '\n'); //discard 'bad' character(s)
 
 		if (5 == menuNumber) { break; }
 
