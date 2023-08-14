@@ -1,95 +1,9 @@
 #include <iostream>
 #include <string>
+#include "menu.h"
+#include "logic.h"
+#include "io.h"
 
-class myexception : public std::exception
-{
-	virtual const char* what() const throw() {
-		return "ERROR! Your input is not an integer.";
-	}
-} exNotInt;
-
-void menu() {
-	const char* str = R"V0G0N(
-=============== MENU ==============
-Christ to Buddha
-	1) Christ year x
-	2) Christ years x-y
-Buddha to Christ
-	3) Buddha year x
-	4) Buddha years x-y
-5) EXIT Program
-
-Enter the menu number: )V0G0N";
-
-	std::cout << str;
-}
-
-std::pair<std::string, int> selectMenu(int number) {
-	std::string year_type;
-
-	switch (number) {
-	case 5:
-		return { "EXIT" ,number };
-	case 1:
-		year_type = "Buddha year";
-		break;
-	case 2:
-		year_type = "Buddha years";
-		break;
-	case 3:
-		year_type = "Christ year";
-		break;
-	case 4:
-		year_type = "Christ years";
-		break;
-	default:
-		year_type = "Not found.";
-		break;
-	}
-	return { year_type, number };
-}
-
-int buddhaToChrist(int year) {
-	return year - 543;
-}
-int christToBuddha(int year) {
-	return year + 543;
-}
-std::string periodBtoC(int from_year, int to_year) {
-	std::string fromY_toY = std::to_string(buddhaToChrist(from_year)) + "-" + std::to_string(buddhaToChrist(to_year));
-	return fromY_toY;
-}
-std::string periodCtoB(int from_year, int to_year) {
-	std::string fromY_toY = std::to_string(christToBuddha(from_year)) + "-" + std::to_string(christToBuddha(to_year));
-	return fromY_toY;
-}
-
-void displaying(std::string year_type, std::string fromY_toY) {
-	std::cout << year_type << " = " << fromY_toY << std::endl;
-}
-int inputNumber() {
-	int number = 0;
-
-	if (!(std::cin >> number)) {
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard 'bad' character(s)
-		throw exNotInt;
-	}
-	return number;
-}
-
-std::pair<int, int> inputNtoN() {
-	int fromYear = 0;
-	int toYear = 0;
-	char to = ' ';
-
-	if (!(std::cin >> fromYear >> to >> toYear)) {
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard 'bad' character(s)
-		throw exNotInt;
-	}
-	return { fromYear, toYear };
-}
 
 std::string calculate(int number) {
 	std::string years;

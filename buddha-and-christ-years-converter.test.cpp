@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
-#include "buddha-and-christ-years-converter.cpp"
+#include "logic.cpp"
+#include "menu.cpp"
 
 TEST(Logic, BuddhaToChrist) {
 	EXPECT_EQ(0, buddhaToChrist(543));
