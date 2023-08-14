@@ -1,16 +1,19 @@
 #include <iostream>
 
 void menu() {
-	std::cout << '\n';
-	std::cout << "Christ to Buddha" << std::endl;
-	std::cout << "	1) Christ year x" << std::endl;
-	std::cout << "	2) Christ years x-x" << std::endl;
-	std::cout << "Buddha to Christ" << std::endl;
-	std::cout << "	3) Buddha year x" << std::endl;
-	std::cout << "	4) Buddha years x-x" << std::endl;
-	std::cout << "5) EXIT Program" << std::endl;
-	std::cout << '\n';
+	const char* str = R"V0G0N(
+=============== MENU ==============
+Christ to Buddha
+	1) Christ year x
+	2) Christ years x-y
+Buddha to Christ
+	3) Buddha year x
+	4) Buddha years x-y
+5) EXIT Program
 
+Enter the menu number: )V0G0N";
+
+	std::cout << str;
 }
 
 int main() {
