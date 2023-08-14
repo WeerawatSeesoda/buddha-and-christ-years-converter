@@ -2,6 +2,7 @@
 #include <iostream>
 #include "custom-exc.h"
 #include <sstream>
+#include <limits>
 
 int inputNumber() {
 	int number = 0;
