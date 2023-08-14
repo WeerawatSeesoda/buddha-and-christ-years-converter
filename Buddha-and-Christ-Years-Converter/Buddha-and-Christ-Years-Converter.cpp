@@ -26,33 +26,38 @@ void main() {
 		cin >> menuNumber;
 		cout << endl;
 
-		if (menuNumber == 1) {
+		if (5 == menuNumber) { break; }
+
+		switch (menuNumber) {
+		case 1:
 			cout << "Chirst year = ";
 			cin >> year;
 			cout << "Buddha year = " << year + 543 << endl;
 			break;
-		} else if (menuNumber == 2) {
+		case 2:
 			cout << "Chirst year x-x = ";
 			cin >> fromYear >> to >> toYear;
 			cout << "Buddha year = " << fromYear + 543 << "-" << toYear + 543 << endl;
 			break;
-		} else if (menuNumber == 3) {
+		case 3:
 			cout << "Buddha year = ";
 			cin >> year;
 			cout << "Christ year = " << year - 543 << endl;
 			break;
-		} else if (menuNumber == 4) {
+		case 4:
 			cout << "Buddha year x-x = ";
 			cin >> fromYear >> to >> toYear;
 			cout << "Christ year = " << fromYear - 543 << "-" << toYear - 543 << endl;
 			break;
-		} else if (menuNumber == 5) {
-			break;
-		} else {
+		default:
 			cout << "Wrong number please select correctly number" << endl;
+			break;
 		}
 	} while (menuNumber < 1 || menuNumber > 4);
 
 	cout << endl;
-	cout << "Thank you and Press any key to exit" << endl;
+	cout << "Thank you and Good bye." << endl;
+
+	system("pause");	// Windows
+	//system("read");	// Linux
 }
