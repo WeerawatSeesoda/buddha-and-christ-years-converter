@@ -121,7 +121,7 @@ std::string calculate(int number) {
 	return years;
 }
 
-int notmain() {
+int main() {
 	int number = 0;
 
 	while (number != 5) {
