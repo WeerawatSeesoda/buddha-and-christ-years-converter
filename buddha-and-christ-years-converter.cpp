@@ -12,7 +12,7 @@ std::string calculate(int number) {
 	switch (number) {
 	case 1:
 		std::cout << "Christ: ";
-		years = std::to_string(christToBuddha(inputNumber()));
+		years = christToBuddha(inputNumber());
 		break;
 	case 2:
 		std::cout << "Christ x-x: ";
@@ -21,7 +21,7 @@ std::string calculate(int number) {
 		break;
 	case 3:
 		std::cout << "Buddha: ";
-		years = std::to_string(buddhaToChrist(inputNumber()));
+		years = buddhaToChrist(inputNumber());
 		break;
 	case 4:
 		std::cout << "Buddha x-x: ";

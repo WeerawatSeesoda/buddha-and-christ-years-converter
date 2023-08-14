@@ -10,6 +10,7 @@ int inputNumber() {
 
 	std::getline(std::cin, line);
 	if (line.empty()) {
+		not_int_exception exNotInt;
 		throw exNotInt;
 	}
 
@@ -22,6 +23,7 @@ int inputNumber() {
 	// If the string-stream is end prematurely before reach the EOF, Throw and error.
 	// But, If the "number" be able to consume all string in the stream, That's mean the string is only contain 1 integer.
 	if (!(std::istringstream(line) >> number >> std::ws).eof()) {
+		not_int_exception exNotInt;
 		throw exNotInt;
 	}
 
@@ -36,6 +38,7 @@ std::pair<int, int> inputNtoN() {
 	if (!(std::cin >> fromYear >> to >> toYear)) {
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard 'bad' character(s)
+		not_int_exception exNotInt;
 		throw exNotInt;
 	}
 	return { fromYear, toYear };
