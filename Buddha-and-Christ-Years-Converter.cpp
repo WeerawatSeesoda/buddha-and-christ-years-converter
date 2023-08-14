@@ -1,5 +1,12 @@
 #include <iostream>
 
+class myexception : public std::exception
+{
+	virtual const char* what() const throw() {
+		return "ERROR! Your input is not an integer.";
+	}
+} exNotInt;
+
 void menu() {
 	const char* str = R"V0G0N(
 =============== MENU ==============
