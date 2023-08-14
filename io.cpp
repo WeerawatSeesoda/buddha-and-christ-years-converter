@@ -1,15 +1,29 @@
 #include "io.h"
 #include <iostream>
 #include "custom-exc.h"
+#include <sstream>
 
 int inputNumber() {
 	int number = 0;
+	std::string line;
 
-	if (!(std::cin >> number)) {
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard 'bad' character(s)
+	std::getline(std::cin, line);
+	if (line.empty()) {
 		throw exNotInt;
 	}
+
+	// In general.
+	// The string-stream will find integer(s) and put it inside int-variable(s).
+	// If fail to find any integer, the condition will be false.
+
+	// In specific.
+	// The "number" will consume only 1 integer (not to confuse with 1 digit) and end the string-stream immediately.
+	// If the string-stream is end prematurely before reach the EOF, Throw and error.
+	// But, If the "number" be able to consume all string in the stream, That's mean the string is only contain 1 integer.
+	if (!(std::istringstream(line) >> number >> std::ws).eof()) {
+		throw exNotInt;
+	}
+
 	return number;
 }
 
