@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Buddha-and-Christ-Years-Converter.c">
+    <ClCompile Include="Buddha-and-Christ-Years-Converter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
