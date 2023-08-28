@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "logic.cpp"
-#include "menu.cpp"
+#include "../src/logic.cpp"
+#include "../src/menu.cpp"
 
 TEST(Logic, BuddhaToChrist) {
 	EXPECT_EQ("0", buddhaToChrist(543));
