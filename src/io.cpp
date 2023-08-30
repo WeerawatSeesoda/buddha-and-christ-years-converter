@@ -41,6 +41,7 @@ std::pair<int, int> inputNtoN() {
 		not_int_exception exNotInt;
 		throw exNotInt;
 	}
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard 'bad' character(s)
 	return { fromYear, toYear };
 }
 

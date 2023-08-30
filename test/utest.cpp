@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include "../src/logic.cpp"
 #include "../src/menu.cpp"
+#include "../src/io.cpp"
 
 TEST(Logic, BuddhaToChrist) {
 	EXPECT_EQ("0", buddhaToChrist(543));
@@ -34,3 +35,12 @@ TEST(Menu, Exit) {
 	EXPECT_EQ("EXIT", buffer.first);
 	EXPECT_EQ(5, buffer.second);
 }
+
+/*
+TEST(ManualInput, XtoYmode) {
+	std::cout << "Please type \"1990-2000\" to below" << std::endl;
+	auto buffer = inputNtoN();
+	EXPECT_EQ(1990, buffer.first);
+	EXPECT_EQ(2000, buffer.second);
+}
+*/
