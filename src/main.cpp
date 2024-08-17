@@ -38,7 +38,7 @@ int main() {
 
 std::string calculate(int number) {
 	std::string years;
-	std::pair<int, int> buffer;
+	std::pair<int, int> year;
 
 	switch (number) {
 	case 1:
@@ -47,8 +47,8 @@ std::string calculate(int number) {
 		break;
 	case 2:
 		std::cout << "Christ x-x: ";
-		buffer = inputNtoN();
-		years = getPeriod("CtoB", buffer.first, buffer.second);
+		year = inputNtoN();
+		years = getPeriod("CtoB", year.first, year.second);
 		break;
 	case 3:
 		std::cout << "Buddha: ";
@@ -56,8 +56,8 @@ std::string calculate(int number) {
 		break;
 	case 4:
 		std::cout << "Buddha x-x: ";
-		buffer = inputNtoN();
-		years = getPeriod("BtoC", buffer.first, buffer.second);
+		year = inputNtoN();
+		years = getPeriod("BtoC", year.first, year.second);
 		break;
 	default:
 		break;
