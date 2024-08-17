@@ -1,4 +1,4 @@
-#include "logic.h"
+#include "logic.hpp"
 
 std::string periodBtoC(int from_year, int to_year) {
 	std::string fromY_toY = buddhaToChrist(from_year) + "-" + buddhaToChrist(to_year);

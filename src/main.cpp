@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
-#include "menu.h"
-#include "logic.h"
-#include "io.h"
+#include "menu.hpp"
+#include "logic.hpp"
+#include "io.hpp"
 
 std::string calculate(int);
 
