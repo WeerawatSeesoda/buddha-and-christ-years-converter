@@ -1,8 +1,5 @@
 #pragma once
 #include <string>
 
-std::string buddhaToChrist(int);
-std::string christToBuddha(int);
-
-std::string periodBtoC(int, int);
-std::string periodCtoB(int, int);
+std::string convertYear(std::string mode, int);
+std::string getPeriod(std::string mode, int, int);

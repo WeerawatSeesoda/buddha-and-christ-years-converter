@@ -1,19 +1,26 @@
 #include <gtest/gtest.h>
 #include "../src/logic.cpp"
 #include "../src/menu.cpp"
-#include "../src/io.cpp"
 
 TEST(Logic, BuddhaToChrist) {
-	EXPECT_EQ("0", buddhaToChrist(543));
+	std::string expected = "0";
+	std::string result = convertYear("BtoC", 543);
+	EXPECT_EQ(expected, result);
 }
 TEST(Logic, ChristToBuddha) {
-	EXPECT_EQ("543", christToBuddha(0));
+	std::string expected = "543";
+	std::string result = convertYear("CtoB", 0);
+	EXPECT_EQ(expected, result);
 }
 TEST(Logic, PeriodBtoC) {
-	EXPECT_EQ("1991-2000", periodBtoC(2534, 2543));
+	std::string expected = "1991-2000";
+	std::string result = getPeriod("BtoC", 2534, 2543);
+	EXPECT_EQ(expected, result);
 }
 TEST(Logic, PeriodCtoB) {
-	EXPECT_EQ("2533-2566", periodCtoB(1990, 2023));
+	std::string expected = "2533-2566";
+	std::string result = getPeriod("CtoB", 1990, 2023);
+	EXPECT_EQ(expected, result);
 }
 
 TEST(Menu, Correct) {
@@ -36,11 +43,3 @@ TEST(Menu, Exit) {
 	EXPECT_EQ(5, buffer.second);
 }
 
-/*
-TEST(ManualInput, XtoYmode) {
-	std::cout << "Please type \"1990-2000\" to below" << std::endl;
-	auto buffer = inputNtoN();
-	EXPECT_EQ(1990, buffer.first);
-	EXPECT_EQ(2000, buffer.second);
-}
-*/

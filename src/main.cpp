@@ -43,21 +43,21 @@ std::string calculate(int number) {
 	switch (number) {
 	case 1:
 		std::cout << "Christ: ";
-		years = christToBuddha(inputNumber());
+		years = convertYear("CtoB", inputNumber());
 		break;
 	case 2:
 		std::cout << "Christ x-x: ";
 		buffer = inputNtoN();
-		years = periodCtoB(buffer.first, buffer.second);
+		years = getPeriod("CtoB", buffer.first, buffer.second);
 		break;
 	case 3:
 		std::cout << "Buddha: ";
-		years = buddhaToChrist(inputNumber());
+		years = convertYear("BtoC", inputNumber());
 		break;
 	case 4:
 		std::cout << "Buddha x-x: ";
 		buffer = inputNtoN();
-		years = periodBtoC(buffer.first, buffer.second);
+		years = getPeriod("BtoC", buffer.first, buffer.second);
 		break;
 	default:
 		break;
